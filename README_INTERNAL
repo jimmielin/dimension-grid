@@ -1,0 +1,140 @@
+************************************************************
+Notes for after-release (When Beta 1 is out)
+************************************************************
+There will be three release cycles:
+
+	# Security: Security hotfixes are patched three times a week - Monday, Wednesday and Saturday. If security flaws are internally discovered, they will be patched on one of the three days.
+	If security flaws are publicly disclosed and/or important, they will be patched immediately, and that's called an out-of-band update. A public announcement should be made announcing the update. The revision number (0.0.0000.Y where Y is the revision number) is also incremented.
+
+	# Features: Features are introduced every Saturday. The reason this is not Sunday is because there's a one-day time so that we can possibly fix some vulnerabilities and bugs on the next day instead of waiting for weekdays to pass (as there won't be much time on weekdays - people have to work, school, etc).
+	When features are introduced, the build number (0.0.XXXX.0 where XXXX is the build number) is incremented and a public announcement is made introducing the feature. If the feature is a large one, it should be deeply examined and explained; otherwise, a small announcement is OK.
+
+	# Bugfix: Bugfixes are patched two times a week - Tuesday and Sunday. When bugs are internally found they will wait for the next cycle; when the bug does not affect any important component, it will also wait for the next cycle so that version numbers can be incremented accordingly. If the bugfixes are urgent, they should be patched ASAP. The revision number is incremented.
+
+Those are small releases. Big releases, such as 1.1, 1.2 or even 2.X, 3.X will be released like the following:
+	# Minor Releases: Minor releases introduce a bunch of new features but DO NOT change the game experience significantly. The features added should be EXTRAS and do not interfere with the other portions of the game, at least not significantly.
+	A minor release should be pushed every 2-5 months. The testing period for a minor release (where it is hosted at beta.[domain]) is 1 month.
+
+	# Major Releases: Major releases introduce a ton (> bunch) of new features AND MAY change the game experience significantly. The features added can be EXTRAS but may also be BEHAVIORS/SETTINGS and may interfere with the entire system.
+
+	A major release should be pushed out every 8-12 months. The testing period for a MAJOR release (where it is hosted at next.[domain]) is 2 months.
+	When a major release is tested (start of the next/beta/preview stage), feedback will be asked. Features, including major new systems may be completely scrapped if the majority (50%) of the players do not like this feature. Remember,
+
+	COMMUNITY IS EVERYTHING.
+
+************************************************************
+Changelog for Dimension.Grid
+************************************************************
+
+1.0.600.7
+	fixed security flaws:
+
+	SECURITY FLAW #1
+	Discovered 2010.08.13, internal
+
+		Affected Components: Alerts, Countries, Regions, Parties, Users
+		Severity: Medium
+
+		A security issue has been identified which allows a remote attacker which can ignore HTTP Location Headers to cause malfunction of the affected components.
+
+	features:
+	* alerts: can now view alerts. automatically mark-as-read is now done.
+	* economical system:
+		* countries: currencies are now implemented
+		* user: accounts are now implemented and GUI for those are now shown.
+			## TODO: transactions API
+	* ui: the default template now shows congress/president control links in the sidebar
+
+	misc:
+	* various performance improvements
+
+
+1.0.600.8
+	out-of-band bugfix patch
+
+		Affected Components: Countries, Regions, Parties
+		Severity: Critical
+
+		A bug has been identified which causes the affected components to malfunction in many cases.
+	
+	features:
+		POLITICAL ENGINE:
+			* parties: index page + pagination. shows basic information about the party and working links.
+			* parties: ability to join a party.
+			* parties: ability to quit a party. also prevents leader from quitting.
+			* parties: administration: index (overview)
+			* parties: administration: edit description
+			* parties: founding date system
+
+			* ui: the default template now shows party leader control links in the sidebar
+
+		ECONOMIC ENGINE:
+			* user: inventory: items management (working links)
+		
+		MISC:
+			* various stability and performance improvements
+
+1.0.674.0
+	Milestone 8 has been reached, therefore a jump in the versions has been made.
+
+	Security Patch
+		SECURITY FLAW #2
+		Discovered 2010.08.21, internal
+			
+			Affected Components: Various
+			Severity: Critical
+
+			A security issue has been identified which allows a remote attacker which can ignore HTTP Location Headers to cause malfunction of the affected components.
+	
+		SECURITY FLAW #3
+		Discovered 2010.08.21, internal
+			
+			Affected Components: User
+			Severity: Critical
+
+			A security issue has been identified which allows disclosure of source code and malicious code execution.
+
+		SECURITY FLAW #4
+		Discovered 2010.08.27, public
+
+			Affected Components: User
+			Severity: Critical
+
+			A security issue has been identified which allows an unidentified remote attacker to access portions of the source code, and cause malfunction of the affected components.
+
+	features:
+		POLITICAL ENGINE:
+			* elections system base
+			
+		ECONOMIC ENGINE:
+
+		MISC:
+			* users: register. w/ CAPTCHA support
+			* users: change password
+
+			* alerts: delete an alert
+			* alerts: delete all alerts
+
+			* ui: elections link
+
+			* various stability and performance improvements
+
+1.0.976.13828
+	This is Milestone 10.
+
+	features:
+		POLITICAL ENGINE:
+			
+		ECONOMIC ENGINE:
+			* SKILL SYSTEM
+
+			* companies: view
+			* companies: work
+			* companies: sell offer stub
+			* library: studying system
+			* trainfield: training system / military skill
+
+			* food consumption system w/ GUI
+		
+		MISC:
+			

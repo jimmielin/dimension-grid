@@ -1,0 +1,46 @@
+/**
+ * Dimension.Grid
+ * @author	Jimmie Lin <jimmie.lin@gmail.com>
+ * @since	 1.0.600.1
+ * @copyright (c) 2010 Jimmie Lin
+ */
+
+html { background: #333542; }
+body {
+	background: #333542;
+}
+
+#header{
+	background: #222129;
+	border-bottom: 1px solid #464855;
+}
+
+	#userbar {
+		border-top: 1px solid #464855;
+		border-left: 1px solid #464855;
+		background: #3f414d;
+		
+		color: #FFF;
+	}
+	
+		#userbar a{ color: #FFF; }
+
+#container{
+	background: #f4f4f4;
+	
+	border: 1px solid #ccc;
+}
+
+.cake-sql-log th {
+	background: #2d2f3b;
+	color: #FFF;
+	padding: 4px;
+	border: 0;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+}
+.cake-sql-log caption {
+	color: #fff;
+	background: #464855;
+	padding: 5px;
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+}

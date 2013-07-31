@@ -1,0 +1,39 @@
+30-second performance benchmark in dimension.Grid m7.copenhagen
+*****************************************************************
+Please note that there are two types of builds:
+- FRE: FRE, or FREE builds, are ready-for-release builds who have debugging symbols disabled. Those are generally faster
+and caching is enabled in such builds.
+
+- CHK/DBG: Or Checked/Debug builds are development builds who have debugging symbols enabled, and load up a lot of data
+before processing requests. Caching is also disabled in this kind of builds, so CHK/DBG builds are MUCH SLOWER than FRE
+builds.
+*****************************************************************
+
+2010.08.08 17:52 build ("Copenhagen", 1.0.600.2.m7) (FRE build)
+	Benchmarked Target: /countries/view/1
+		Using PyLot w/ 150 agents, for 30 seconds. no interval
+	Result: avg 11.856s, min 2.507s, max 41.523s (134 req, 53 err)
+
+2010.08.08 17:58 build ("Copenhagen", 1.0.600.3.m7) (FRE build)
+	Benchmarked Target: /countries/view/1
+		Using PyLot w/ 150 agents, for 30 seconds. no interval
+	Result: avg 8.713s, min 2.498s, max 15.204s (187 req, 7 err)
+
+2010.08.08 18:13 build ("Copenhagen", 1.0.600.4.m7) (FRE build)
+	Benchmarked Target: /countries/view/1
+		Using PyLot w/ 150 agents, for 30 seconds. no interval
+	Result: avg 5.047s, min 1.137s, max 10.663s (226 req, 20 err)
+
+2010.08.09 16:09 build ("Copenhagen", 1.0.600.5.m7) (CHK/DBG build)
+	Benchmarked Target: /countries/view/1
+		Using PyLot w/ 150 agents, for 30 seconds. no interval
+	Result: avg 6.535s, min 3.131s, max 9.949s (205 req, 0 err)
+	
+	2010.08.09 16:09 build ("Copenhagen", 1.0.600.5.m7) (FRE build)
+		Benchmarked Target: /countries/view/1
+			Using PyLot w/ 150 agents, for 30 seconds. no interval
+		Result: avg 5.434s, min 2.412s, max 10.242s (226 req, 7 err)
+
+	*******************************
+	200ms performance loss in build .5. a performance refresh cycle will come soon.
+	*******************************
